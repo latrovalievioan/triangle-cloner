@@ -3,8 +3,15 @@
 // ReactDOM.render(element, container)
 //
 import { createTextElement, createElement } from "./createElement.js"
+import { Cloner } from "./Cloner.js"
 
-const element = createElement("h1", {id: 1}, "Triangle Cloner");
+// const element = createElement("h1", {id: 1}, "Triangle Cloner");
+//
+/** @jsx Cloner.createElement */
+const element = (
+  <h1 id={1}>Triangle Cloner</h1>
+)
+
 
 const container = document.getElementById("root")
 
