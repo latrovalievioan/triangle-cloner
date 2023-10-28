@@ -18,7 +18,8 @@ const container = document.getElementById("root")
 const node = document.createElement(element.type)
 node.title = element.props.title
 
-const text = document.createTextNode(element.props.children)
+const text = document.createTextNode("")
+text.nodeValue = element.props.childen
 
 node.appendChild(text)
 container.appendChild(node)
