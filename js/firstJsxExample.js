@@ -2,8 +2,8 @@
 // const container = document.getElementById("root")
 // ReactDOM.render(element, container)
 //
-import { createTextElement, createElement } from "./createElement.js"
-import { Cloner } from "./Cloner.js"
+import { Cloner } from "./Cloner/index.js"
+import { createTextElement } from "./Cloner/createElement.js"
 
 // const element = createElement("h1", {id: 1}, "Triangle Cloner");
 //
