@@ -23,12 +23,16 @@ export const createElement = (type, props, ...children) => {
     type,
     props: {
       ...props,
-      children,
+      children: children.map(
+        c => typeof c === 'string' 
+          ? createTextElement(c)
+          : c
+      ),
     }
   })
 }
 
-export const createTextElement = (text) => {
+const createTextElement = (text) => {
   return ({
     type: "TEXT_ELEMENT",
     props: {
