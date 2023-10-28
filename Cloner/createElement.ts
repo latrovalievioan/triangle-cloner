@@ -1,18 +1,9 @@
-type Props = {
-  [k: string]: any
-}
-
-type Children = (string | ClonerElement)[]
-
-export type ClonerElement = {
-  type: string,
-  props: Partial<Props & Children>
-}
+import { CreateElementProps, ElementChildren, ClonerElement } from "./types.ts"
 
 export const createElement = (
   type: string,
-  props: Props,
-  ...children: Children
+  props: CreateElementProps,
+  ...children: ElementChildren
 ): ClonerElement => ({
     type,
     props: {
