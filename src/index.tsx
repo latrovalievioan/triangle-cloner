@@ -1,16 +1,20 @@
+import Cloner from "../Cloner/index.ts"
 import { ClonerElement } from "../Cloner/types.ts"
-import { Cloner } from "../Cloner/index.ts"
 
-// const element = Cloner.createElement("h1", {id: "test"}, "Create Element Baby")
-//
+
 /** @jsx Cloner.createElement */
-const element = (
-  <div id="test">
-    <h1 id="h1-test">This is an H1</h1>
-    <h2 id="h2-test">This is an H2</h2>
+const element: ClonerElement = (
+  <div id="div">
+    <h1 id="hehe">HEHE</h1>
   </div>
-) as ClonerElement;
+)
+
+const _element0 = Cloner.createElement("h1", {id: "hehe"})
+
+const _element = Cloner.createElement("div", {id: "div"}, _element0)
 
 const container = document.getElementById("root")
 
+
 Cloner.render(element, container!)
+Cloner.render(_element, container!)

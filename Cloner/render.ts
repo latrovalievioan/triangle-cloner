@@ -1,8 +1,12 @@
-import { ClonerElement } from "./types";
+import { ClonerElement, TextElement } from "./types";
 
-export const render = (element: ClonerElement, container: HTMLElement | Text) => {
-  const dom = element.type === "TEXT_ELEMENT" 
-    ? document.createTextNode("") 
+const isHTMLElement = (element: HTMLElement | Text): element is HTMLElement => {
+  return element.nodeName !== "#text"
+}
+
+export const render = (element: ClonerElement | TextElement, container: HTMLElement): void => {
+  const dom = element.type === "TEXT_ELEMENT"
+    ? document.createTextNode("")
     : document.createElement(element.type)
 
   Object.keys(element.props).forEach(k => {
@@ -11,7 +15,9 @@ export const render = (element: ClonerElement, container: HTMLElement | Text) =>
     dom[k] = element.props[k]
   })
 
-  element.props.children.forEach(c => render(c, dom))
+  if(isHTMLElement(dom)) {
+    element.props.children.forEach(c => render(c, dom))
+  }
 
   container.appendChild(dom)
 }

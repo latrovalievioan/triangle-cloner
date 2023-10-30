@@ -1,26 +1,26 @@
-import { CreateElementProps, ElementChildren, ClonerElement } from "./types.ts"
+import { ClonerElement, BaseElementProps, TextElement } from "./types.ts"
 
-export const createElement = (
+export const createElement = <PropsType extends BaseElementProps>(
   type: string,
-  props: CreateElementProps,
-  ...children: ElementChildren
-): ClonerElement => ({
+  props: PropsType,
+  ...children: (ClonerElement | Text | string)[]
+): ClonerElement<PropsType> => ({
     type,
     props: {
       ...props,
-      children: children.map(c => 
-        typeof c === 'string'
+      children: children.map(
+        c => typeof c === 'string'
           ? createTextElement(c)
-          : c
+          : c as ClonerElement
       ),
     }
 })
 
 
-const createTextElement = (text: string) => ({
+export const createTextElement = (text: string): TextElement => ({
   type: "TEXT_ELEMENT",
   props: {
     nodeValue: text,
-    children: [],
+    children: []
   }
 })
