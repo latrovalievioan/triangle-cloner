@@ -9,12 +9,6 @@ const element: ClonerElement = (
   </div>
 )
 
-const _element0 = Cloner.createElement("h1", {id: "hehe"})
-
-const _element = Cloner.createElement("div", {id: "div"}, _element0)
-
 const container = document.getElementById("root")
 
-
 Cloner.render(element, container!)
-Cloner.render(_element, container!)
