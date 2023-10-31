@@ -10,7 +10,7 @@ Because I want to expand my knowledge about the library. And the best way to und
 ## Who inspired you?
 I've come across [this talk](https://www.youtube.com/watch?v=8Kc2REHdwnQ) from Rodrigo Pombo, and that lit a fire in my head.
 
-## How is it build?
+## How is it built?
 I'm using [Vite](https://github.com/vitejs/vite) to bundle my files, and [Babel](https://github.com/babel/babel) to be able to use my library with JSX.
 
 ## How do I run it?
