@@ -3,7 +3,7 @@ import { ClonerElement, BaseElementProps, TextElement } from "./types.ts"
 export const createElement = <PropsType extends BaseElementProps>(
   type: string,
   props: PropsType,
-  ...children: (ClonerElement | Text | string)[]
+  ...children: (ClonerElement | string)[]
 ): ClonerElement<PropsType> => ({
     type,
     props: {

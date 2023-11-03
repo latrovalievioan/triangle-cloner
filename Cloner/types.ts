@@ -13,9 +13,7 @@ export type TextElement = {
 
 export type ClonerElement<PropsType extends BaseElementProps = BaseElementProps> = {
   type: string;
-  props: {
-    [key in keyof PropsType]: PropsType[keyof PropsType];
-  } & {
+  props: PropsType & {
     children: (ClonerElement | TextElement)[]
   }
 }
