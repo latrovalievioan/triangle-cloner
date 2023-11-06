@@ -1,0 +1,175 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createElement > Snapshot 1`] = `
+{
+  "props": {
+    "children": [
+      {
+        "props": {
+          "children": [
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "1",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "2",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "3",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "4",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "5",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+          ],
+        },
+        "type": "ul",
+      },
+    ],
+  },
+  "type": "div",
+}
+`;
+
+exports[`createElement > ne6to si 1`] = `
+{
+  "props": {
+    "children": [
+      {
+        "props": {
+          "children": [
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "1",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "2",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "3",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "4",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+            {
+              "props": {
+                "children": [
+                  {
+                    "props": {
+                      "children": [],
+                      "nodeValue": "5",
+                    },
+                    "type": "TEXT_ELEMENT",
+                  },
+                ],
+              },
+              "type": "li",
+            },
+          ],
+        },
+        "type": "ul",
+      },
+    ],
+  },
+  "type": "div",
+}
+`;

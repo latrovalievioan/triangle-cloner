@@ -1,14 +1,12 @@
 import { describe, test, expect, beforeEach } from "vitest";
 import Cloner from "./index";
-import { JSDOM } from "jsdom";
 
 describe("render", () => {
-  let dom: JSDOM;
   let container: HTMLElement;
 
   beforeEach(() => {
-    dom = new JSDOM(`<div id="root"></div>`);
-    container = dom.window.document.getElementById("root") as HTMLElement;
+    document.body.innerHTML = '<div id="root"></div>';
+    container = document.getElementById("root") as HTMLElement;
   });
 
   test("doesn't crash", () => {
@@ -51,7 +49,9 @@ describe("render", () => {
 
     Cloner.render(div, container);
 
-    expect(container.firstChild.id).toEqual("div");
-    expect(container.firstChild.onClick).toEqual(handleClick);
+    expect(container.firstChild).toMatchObject({
+      id: "div",
+      onClick: handleClick,
+    });
   });
 });
